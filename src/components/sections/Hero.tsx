@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowDown, ArrowUpRight } from "lucide-react";
+import { ArrowDown } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { roles, site } from "@/data/site";
 import HeroVisual from "./HeroVisual";
@@ -88,9 +88,6 @@ export default function Hero() {
           >
             <Button href="#projects" icon={<ArrowDown size={18} />}>
               Explore My Work
-            </Button>
-            <Button href="#contact" variant="outline" icon={<ArrowUpRight size={18} />}>
-              Let&rsquo;s Connect
             </Button>
           </motion.div>
 
