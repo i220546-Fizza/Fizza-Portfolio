@@ -16,7 +16,7 @@ export const site = {
 
   // EDIT: put your photo in /public (for example public/profile.jpg) and set "/profile.jpg".
   // While this is empty, a clean placeholder is shown.
-  profileImage: "",
+  profileImage: "/profile.jpg",
 
 };
 
