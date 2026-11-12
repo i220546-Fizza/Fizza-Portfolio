@@ -28,7 +28,7 @@ export default function Skills() {
         id="skills-title"
         dark
         title="What I work with"
-        description={`${totalSkills} tools and topics across five areas. Pick an area to see what's in it.`}
+        description={`${totalSkills} skills across ${skillCategories.length} areas. Pick an area to see what's in it.`}
       />
 
       <div className="mt-14 grid grid-cols-[minmax(0,1fr)] gap-10 lg:grid-cols-12 lg:gap-16">
@@ -53,7 +53,7 @@ export default function Skills() {
                   aria-controls="skills-panel"
                   tabIndex={selected ? 0 : -1}
                   onClick={() => setActiveId(cat.id)}
-                  className={`relative shrink-0 whitespace-nowrap border border-cream/20 px-5 py-3 text-left font-display text-lg font-semibold transition-colors lg:flex lg:items-center lg:justify-between lg:whitespace-normal lg:border-0 lg:border-b lg:px-0 lg:py-5 lg:text-2xl ${
+                  className={`relative shrink-0 whitespace-nowrap border border-cream/20 px-5 py-3 text-left font-display text-lg font-semibold transition-colors lg:flex lg:items-center lg:justify-between lg:whitespace-normal lg:border-0 lg:border-b lg:px-0 lg:py-3.5 lg:text-xl ${
                     selected ? "text-cream" : "text-cream/65 hover:text-cream"
                   }`}
                 >
