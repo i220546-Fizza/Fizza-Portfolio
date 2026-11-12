@@ -10,9 +10,6 @@ services:
     envVars:
       - key: NODE_VERSION
         value: 20.18.0
-      # Optional: paste a form endpoint (Formspree, etc.) to send contact messages directly.
-      - key: VITE_CONTACT_ENDPOINT
-        sync: false
     routes:
       # Single-page app: any path serves index.html instead of a 404 on refresh.
       - type: rewrite

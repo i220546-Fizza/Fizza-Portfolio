@@ -86,8 +86,8 @@ export default function Navbar() {
         </nav>
 
         <div className="flex items-center gap-3">
-          <Button href="#contact" size="sm" className="hidden sm:inline-flex">
-            Let&rsquo;s Talk
+          <Button href={`mailto:${site.email}`} size="sm" className="hidden sm:inline-flex">
+            Email me
           </Button>
           <button
             type="button"
@@ -129,8 +129,8 @@ export default function Navbar() {
                   </li>
                 ))}
               </ul>
-              <Button href="#contact" onClick={(e) => goTo(e as MouseEvent<HTMLAnchorElement>, "contact")} className="mt-6 w-full">
-                Let&rsquo;s Talk
+              <Button href={`mailto:${site.email}`} onClick={() => setOpen(false)} className="mt-6 w-full">
+                Email me
               </Button>
             </nav>
           </motion.div>

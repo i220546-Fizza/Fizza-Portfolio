@@ -6,11 +6,7 @@ export const site = {
   brand: "FIZZA.",
   title: "AI Developer & Machine Learning Engineer",
 
-  // EDIT: replace with your real contact details.
-  email: "your.email@example.com",
-  linkedin: "https://www.linkedin.com/in/your-linkedin-handle",
-  fiverr: "https://www.fiverr.com/your-fiverr-username",
-
+  email: "fizzasarfraz515@gmail.com",
   github: "https://github.com/fizzasarfraz515",
 
   // EDIT: shown in the About section. Change or remove if you prefer.
@@ -20,12 +16,6 @@ export const site = {
   // While this is empty, a clean placeholder is shown.
   profileImage: "",
 
-  availability: {
-    // Set to false to switch the hero badge to a neutral message.
-    open: true,
-    openLabel: "Available for freelance projects and collaborations",
-    closedLabel: "Not taking new projects right now",
-  },
 };
 
 export const navLinks = [
@@ -33,9 +23,7 @@ export const navLinks = [
   { id: "about", label: "About" },
   { id: "skills", label: "Skills" },
   { id: "projects", label: "Projects" },
-  { id: "services", label: "Services" },
   { id: "education", label: "Education" },
-  { id: "contact", label: "Contact" },
 ];
 
 export const roles = [
@@ -45,8 +33,3 @@ export const roles = [
   "Computer Vision Developer",
   "Aspiring AI Researcher",
 ];
-
-/** "https://www.linkedin.com/in/x/" -> "linkedin.com/in/x" */
-export function displayUrl(url: string): string {
-  return url.replace(/^https?:\/\/(www\.)?/, "").replace(/\/$/, "");
-}

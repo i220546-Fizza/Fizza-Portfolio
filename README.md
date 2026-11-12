@@ -26,10 +26,9 @@ npm run preview     # serve the production build locally
 
 | What | File |
 |---|---|
-| Email, LinkedIn, Fiverr, location, photo, availability badge | `src/data/site.ts` |
+| Email, location, profile photo | `src/data/site.ts` |
 | Projects (links, screenshots, details) | `src/data/projects.ts` |
 | Skills | `src/data/skills.ts` |
-| Services | `src/data/services.ts` |
 | Education | `src/data/education.ts` |
 | About text | `src/components/sections/About.tsx` |
 
@@ -38,20 +37,11 @@ npm run preview     # serve the production build locally
 1. Copy your photo into the `public` folder, for example `public/profile.jpg` (portrait, about 4:5, at least 800 px wide).
 2. In `src/data/site.ts` set `profileImage: "/profile.jpg"`.
 
-## Add real GitHub, LinkedIn and Fiverr links
+## Project links
 
-- Profile links: edit `email`, `linkedin` and `fiverr` in `src/data/site.ts`. Your GitHub profile is already set.
-- Per project: in `src/data/projects.ts` set `github: "https://github.com/fizzasarfraz515/<repo>"` and, where one exists, `demo: "https://..."`. An empty `github` keeps that button disabled; an empty `demo` hides the Live Demo button.
-- Optional screenshot for a project: save it as `public/projects/<name>.png` and set `image: "/projects/<name>.png"`.
+- In `src/data/projects.ts` set `github: "https://github.com/fizzasarfraz515/<repo>"` and, where one exists, `demo: "https://..."`. An empty `github` keeps that button disabled; an empty `demo` hides the Live Demo button.
+- Optional screenshot: save it as `public/projects/<name>.png` and set `image: "/projects/<name>.png"`.
 - PrepifyAI: add its real `highlights` and `tech`, then remove `detailsPending: true`.
-
-## Contact form
-
-The site has no server, so by default the form opens the visitor's email app with the message filled in and says so. To send messages directly:
-
-1. Create a free form endpoint (for example at https://formspree.io).
-2. Copy `.env.example` to `.env` and set `VITE_CONTACT_ENDPOINT=https://formspree.io/f/xxxxxxx`.
-3. On Vercel or Netlify, add the same variable in the project's environment settings.
 
 ## Deploy on Render (Static Site)
 
