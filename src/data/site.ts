@@ -7,6 +7,8 @@ export const site = {
   title: "AI Developer & Machine Learning Engineer",
 
   email: "fizzasarfraz515@gmail.com",
+  linkedin: "https://www.linkedin.com/in/fizza-sarfraz-45aa052a2/",
+  fiverr: "https://www.fiverr.com/fizzasarfraz1",
   github: "https://github.com/fizzasarfraz515",
 
   // EDIT: shown in the About section. Change or remove if you prefer.

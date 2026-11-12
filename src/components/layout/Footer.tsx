@@ -1,8 +1,10 @@
-import { Github, Mail } from "lucide-react";
+import { Briefcase, Github, Linkedin, Mail } from "lucide-react";
 import { navLinks, site } from "@/data/site";
 
 const socials = [
   { label: "GitHub", href: site.github, icon: Github, external: true },
+  { label: "LinkedIn", href: site.linkedin, icon: Linkedin, external: true },
+  { label: "Fiverr", href: site.fiverr, icon: Briefcase, external: true },
   { label: site.email, href: `mailto:${site.email}`, icon: Mail, external: false },
 ];
 
