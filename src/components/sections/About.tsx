@@ -1,7 +1,7 @@
 import { Section } from "@/components/ui/Section";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/ui/Reveal";
-import { ProfilePhoto } from "@/components/ui/ProfilePhoto";
+import { ProfileImage } from "@/components/ui/ProfileImage";
 import { projects } from "@/data/projects";
 import { site } from "@/data/site";
 
@@ -21,7 +21,7 @@ export default function About() {
           <div className="relative mx-auto max-w-[400px]">
             <div aria-hidden="true" className="absolute inset-0 translate-x-4 translate-y-4 rounded-t-[999px] border border-olive" />
             <div className="relative aspect-[4/5] overflow-hidden rounded-t-[999px] bg-taupe">
-              <ProfilePhoto />
+              <ProfileImage variant="portrait" />
             </div>
           </div>
         </Reveal>

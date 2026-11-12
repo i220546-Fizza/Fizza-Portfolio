@@ -1,5 +1,6 @@
 import type { CSSProperties } from "react";
 import { motion, useMotionValue, useSpring } from "framer-motion";
+import { ProfileImage } from "@/components/ui/ProfileImage";
 
 type OrbitVars = CSSProperties & Record<`--${string}`, string>;
 
@@ -16,7 +17,7 @@ interface Ring {
 
 // Labels are tools from the Skills section.
 const rings: Ring[] = [
-  { inset: "31%", duration: "26s", nodes: [{ angle: 40 }, { angle: 220 }] },
+  { inset: "27%", duration: "26s", nodes: [{ angle: 40 }, { angle: 220 }] },
   {
     inset: "19%",
     duration: "42s",
@@ -64,7 +65,7 @@ export default function HeroVisual() {
     >
       <motion.div
         role="img"
-        aria-label="Illustration of a machine learning model surrounded by orbiting tools such as PyTorch, OpenCV, YOLO, FastAPI, React and TensorFlow"
+        aria-label="Portrait of Fizza Sarfraz surrounded by orbiting tools: PyTorch, OpenCV, YOLO, FastAPI, React and TensorFlow"
         className="relative aspect-square w-full"
         style={{ rotateX: springX, rotateY: springY, transformStyle: "preserve-3d" }}
         initial={{ opacity: 0, scale: 0.92 }}
@@ -107,17 +108,20 @@ export default function HeroVisual() {
           </div>
         ))}
 
-        {/* Core sphere */}
-        <div
-          className="absolute inset-[38%] flex items-center justify-center rounded-full"
-          style={{
-            background:
-              "radial-gradient(circle at 30% 26%, #A5B27F 0%, #66734B 34%, #2B3022 74%, #191A17 100%)",
-            boxShadow: "0 28px 50px -18px rgba(25,26,23,.55), inset 0 -10px 24px rgba(0,0,0,.35)",
-            transform: "translateZ(40px)",
-          }}
-        >
-          <span className="font-serif text-3xl italic text-cream sm:text-4xl">AI</span>
+        {/* Profile photo at the centre of the orbit */}
+        <div className="absolute inset-[34%]" style={{ transform: "translateZ(40px)" }}>
+          <div
+            className="h-full w-full overflow-hidden rounded-full bg-taupe ring-4 ring-olive"
+            style={{ boxShadow: "0 24px 44px -16px rgba(25,26,23,.55)" }}
+          >
+            <ProfileImage variant="avatar" />
+          </div>
+          <span
+            aria-hidden="true"
+            className="absolute -bottom-1 -right-1 flex h-10 w-10 items-center justify-center rounded-full bg-olive font-serif text-base italic text-cream ring-2 ring-cream"
+          >
+            AI
+          </span>
         </div>
 
         {/* Floating notes */}

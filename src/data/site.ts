@@ -8,16 +8,18 @@ export const site = {
 
   email: "fizzasarfraz515@gmail.com",
   linkedin: "https://www.linkedin.com/in/fizza-sarfraz-45aa052a2/",
-  fiverr: "https://www.fiverr.com/fizzasarfraz1",
+  fiverr: "https://www.fiverr.com/sellers/fizzasarfraz1",
   github: "https://github.com/fizzasarfraz515",
 
   // EDIT: shown in the About section. Change or remove if you prefer.
   location: "Islamabad, Pakistan",
 
-  // EDIT: put your photo in /public (for example public/profile.jpg) and set "/profile.jpg".
-  // While this is empty, a clean placeholder is shown.
+  // Your photo lives at public/profile.jpg. Replace that file to change it.
   profileImage: "/profile.jpg",
-
+  // Where the face sits in the photo (x% y%). Used to keep it centred when the photo is cropped.
+  profileImageFocus: "54% 40%",
+  // Zoom for the round photo in the hero (1 = no zoom).
+  profileAvatarZoom: 1.9,
 };
 
 export const navLinks = [
@@ -26,6 +28,7 @@ export const navLinks = [
   { id: "skills", label: "Skills" },
   { id: "projects", label: "Projects" },
   { id: "education", label: "Education" },
+  { id: "contact", label: "Contact" },
 ];
 
 export const roles = [
@@ -35,3 +38,8 @@ export const roles = [
   "Computer Vision Developer",
   "Aspiring AI Researcher",
 ];
+
+/** "https://www.linkedin.com/in/x/" -> "linkedin.com/in/x" */
+export function displayUrl(url: string): string {
+  return url.replace(/^https?:\/\/(www\.)?/, "").replace(/\/$/, "");
+}

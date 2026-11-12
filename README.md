@@ -26,7 +26,7 @@ npm run preview     # serve the production build locally
 
 | What | File |
 |---|---|
-| Email, location, profile photo | `src/data/site.ts` |
+| Email, LinkedIn, Fiverr, GitHub, location, photo position | `src/data/site.ts` |
 | Projects (links, screenshots, details) | `src/data/projects.ts` |
 | Skills | `src/data/skills.ts` |
 | Education | `src/data/education.ts` |
@@ -42,6 +42,20 @@ npm run preview     # serve the production build locally
 - In `src/data/projects.ts` set `github: "https://github.com/fizzasarfraz515/<repo>"` and, where one exists, `demo: "https://..."`. An empty `github` keeps that button disabled; an empty `demo` hides the Live Demo button.
 - Optional screenshot: save it as `public/projects/<name>.png` and set `image: "/projects/<name>.png"`.
 - PrepifyAI: add its real `highlights` and `tech`, then remove `detailsPending: true`.
+
+## Profile photo
+
+The photo is shown by one reusable component, `src/components/ui/ProfileImage.tsx`, in the hero (round) and in About (portrait).
+To change it, replace `public/profile.jpg` with a new photo (portrait, about 4:5, at least 800 px wide). If the face looks off-centre after cropping, adjust `profileImageFocus` (x% y%) and `profileAvatarZoom` in `src/data/site.ts`.
+
+## Contact form
+
+The site has no server, so by default the form opens the visitor's email app with the message filled in and says so; nothing is sent automatically.
+To send messages directly:
+
+1. Create a free form endpoint (for example at https://formspree.io) that forwards to your email.
+2. On Render, open your site, then Environment, and add `VITE_CONTACT_ENDPOINT` with the endpoint URL. Redeploy.
+   (For local testing, copy `.env.example` to `.env` and set it there.)
 
 ## Deploy on Render (Static Site)
 
